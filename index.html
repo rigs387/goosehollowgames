@@ -2,24 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Goose Hollow Games — an indie studio making simulation and sports RPGs. Small games with big energy.">
   <title>Goose Hollow Games</title>
+  <link rel="icon" href="assets/goose.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="hero">
   <div class="hero-inner">
-    <img src="assets/logo.jpg" class="logo">
+    <img src="assets/logo.jpg" class="logo" alt="Goose Hollow Games">
 
     <p class="tagline">Small games with big energy.</p>
 
     <div class="buttons">
-      <a href="#" class="btn">Play</a>
-      <a href="#" class="btn outline">Follow</a>
+      <a href="https://goosehollowgames.itch.io/track-star" class="btn" target="_blank" rel="noopener">Play</a>
+      <a href="https://goosehollowgames.itch.io/" class="btn outline" target="_blank" rel="noopener">Follow</a>
     </div>
 
-    <!-- Goose accent -->
-    <img src="assets/goose.png" class="goose">
+    <!-- Goose accent: wrapper handles walk-in, img handles waddle -->
+    <div class="goose-wrapper">
+      <img src="assets/goose.png" class="goose" alt="">
+    </div>
   </div>
 </header>
 
@@ -27,16 +34,26 @@
   <h2>Games</h2>
 
   <div class="game-card">
-    <h3>Track Star</h3>
-    <p>A text-based track & field RPG where every decision matters.</p>
-    <a href="#">Play on itch.io</a>
+    <img src="assets/Track%20Star%20-%201920%20x%201080.png" class="game-cover" alt="Track Star">
+    <div class="game-card-body">
+      <h3>Track Star</h3>
+      <p>A text-based track &amp; field RPG where every decision matters.</p>
+      <div class="game-links">
+        <a href="https://goosehollowgames.itch.io/track-star" class="btn" target="_blank" rel="noopener">Play on itch.io</a>
+        <a href="https://vimeo.com/1175597018" class="btn outline" target="_blank" rel="noopener">Watch Trailer</a>
+      </div>
+    </div>
   </div>
 
 </section>
 
-<section class="about">
-  <img src="assets/goose.png" class="divider-goose">
+<div class="goose-parade" aria-hidden="true">
+  <img src="assets/goose.png" alt="">
+  <img src="assets/goose.png" alt="">
+  <img src="assets/goose.png" alt="">
+</div>
 
+<section class="about">
   <h2>About</h2>
   <p>
     Goose Hollow Games is an indie studio focused on simulation and sports RPGs.
@@ -45,8 +62,30 @@
 </section>
 
 <footer>
+  <img src="assets/goose.png" class="footer-goose" alt="">
   <p>© Goose Hollow Games</p>
 </footer>
+
+<script>
+(function () {
+  var last = 0;
+  document.addEventListener('mousemove', function (e) {
+    var now = Date.now();
+    if (now - last < 120) return;
+    last = now;
+    var img = document.createElement('img');
+    img.src = 'assets/goose.png';
+    img.className = 'cursor-goose';
+    img.style.left = (e.clientX - 12) + 'px';
+    img.style.top = (e.clientY - 12) + 'px';
+    document.body.appendChild(img);
+    requestAnimationFrame(function () {
+      img.classList.add('cursor-goose-fade');
+    });
+    setTimeout(function () { img.remove(); }, 600);
+  });
+})();
+</script>
 
 </body>
 </html>
