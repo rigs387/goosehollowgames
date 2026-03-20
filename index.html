@@ -13,28 +13,19 @@
 <body>
 
 <header class="hero">
-  <div class="hero-inner">
-    <img src="assets/logo.jpg" class="logo" alt="Goose Hollow Games">
-
-    <p class="tagline">One Dev. One Goose. Big Ideas.</p>
-
-    <div class="buttons">
-      <a href="https://goosehollowgames.itch.io/track-star" class="btn" target="_blank" rel="noopener">Play</a>
-      <a href="https://goosehollowgames.itch.io/" class="btn outline" target="_blank" rel="noopener">Follow</a>
-    </div>
-
-    <!-- Goose accent: wrapper handles walk-in, img handles waddle -->
-    <div class="goose-wrapper">
-      <img src="assets/goose.png" class="goose" alt="">
-    </div>
+  <img src="assets/logo.jpg" class="logo" alt="Goose Hollow Games">
+  <p class="tagline">One Dev. One Goose. Big Ideas.</p>
+  <div class="buttons">
+    <a href="https://goosehollowgames.itch.io/track-star" class="btn" target="_blank" rel="noopener">Play</a>
+    <a href="https://goosehollowgames.itch.io/" class="btn outline" target="_blank" rel="noopener">Follow</a>
   </div>
+  <img src="assets/goose.png" class="hero-goose" alt="">
 </header>
 
 <section class="games">
   <h2>Games</h2>
-
   <div class="game-card">
-    <img src="assets/Track%20Star%20-%201920%20x%201080.png" class="game-cover" alt="Track Star">
+    <img src="assets/Track%20Star%20-%20462%20x%20174%20(1).png" class="game-cover" alt="Track Star">
     <div class="game-card-body">
       <h3>Track Star</h3>
       <p>A text-based track &amp; field RPG where every decision matters.</p>
@@ -44,7 +35,6 @@
       </div>
     </div>
   </div>
-
 </section>
 
 <div class="goose-parade" aria-hidden="true">
@@ -65,27 +55,6 @@
   <img src="assets/goose.png" class="footer-goose" alt="">
   <p>© Goose Hollow Games</p>
 </footer>
-
-<script>
-(function () {
-  var last = 0;
-  document.addEventListener('mousemove', function (e) {
-    var now = Date.now();
-    if (now - last < 120) return;
-    last = now;
-    var img = document.createElement('img');
-    img.src = 'assets/goose.png';
-    img.className = 'cursor-goose';
-    img.style.left = (e.clientX - 12) + 'px';
-    img.style.top = (e.clientY - 12) + 'px';
-    document.body.appendChild(img);
-    requestAnimationFrame(function () {
-      img.classList.add('cursor-goose-fade');
-    });
-    setTimeout(function () { img.remove(); }, 600);
-  });
-})();
-</script>
 
 </body>
 </html>

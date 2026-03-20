@@ -8,60 +8,30 @@ body {
 
 h2, h3 {
   font-family: 'Fredoka One', Arial, sans-serif;
-  letter-spacing: 0.5px;
 }
 
 /* HERO */
 .hero {
-  padding: 80px 20px;
-  position: relative;
-}
-
-.hero-inner {
-  position: relative;
-  display: inline-block;
+  padding: 60px 20px 40px;
 }
 
 .logo {
   max-width: 500px;
   width: 80%;
   filter: drop-shadow(0 6px 12px rgba(0,0,0,0.4));
-}
-
-/* GOOSE ACCENT — wrapper slides in, img wadddles */
-@keyframes slide-in {
-  from { transform: translateX(60px); opacity: 0; }
-  to   { transform: translateX(0);    opacity: 1; }
-}
-
-@keyframes waddle {
-  0%, 100% { transform: rotate(-4deg); }
-  50%       { transform: rotate(4deg);  }
-}
-
-.goose-wrapper {
-  position: absolute;
-  bottom: -20px;
-  right: -70px;
-  animation: slide-in 0.7s ease-out forwards;
-}
-
-.goose {
-  width: 160px;
   display: block;
-  animation: waddle 1.8s ease-in-out infinite;
+  margin: 0 auto;
 }
 
-/* TAGLINE */
 .tagline {
-  margin-top: 15px;
+  margin: 16px 0 0;
   font-size: 20px;
 }
 
 /* BUTTONS */
 .btn {
   display: inline-block;
-  margin: 10px;
+  margin: 8px;
   padding: 12px 22px;
   background: #f2b300;
   color: #0b5d3b;
@@ -83,6 +53,22 @@ h2, h3 {
   color: #f2b300;
 }
 
+.buttons {
+  margin-top: 20px;
+}
+
+/* HERO GOOSE */
+@keyframes waddle {
+  0%, 100% { transform: rotate(-4deg); }
+  50%       { transform: rotate(4deg);  }
+}
+
+.hero-goose {
+  width: 120px;
+  margin-top: 30px;
+  animation: waddle 1.8s ease-in-out infinite;
+}
+
 /* GAMES */
 .games {
   padding: 60px 20px;
@@ -90,7 +76,7 @@ h2, h3 {
 
 .game-card {
   margin: 20px auto;
-  max-width: 520px;
+  max-width: 500px;
   border: 2px solid rgba(242, 179, 0, 0.3);
   border-radius: 12px;
   overflow: hidden;
@@ -123,17 +109,17 @@ h2, h3 {
 
 .game-links {
   display: flex;
-  gap: 0;
   flex-wrap: wrap;
+  gap: 8px;
 }
 
 .game-links .btn {
-  margin: 0 10px 0 0;
+  margin: 0;
 }
 
 /* GOOSE PARADE */
 @keyframes waddle-parade {
-  0%, 100% { transform: rotate(-5deg) translateY(0);  }
+  0%, 100% { transform: rotate(-5deg) translateY(0);   }
   50%       { transform: rotate(5deg)  translateY(-5px); }
 }
 
@@ -141,11 +127,11 @@ h2, h3 {
   display: flex;
   justify-content: center;
   gap: 28px;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 .goose-parade img {
-  width: 52px;
+  width: 50px;
   opacity: 0.85;
 }
 
@@ -182,20 +168,4 @@ footer p {
 .footer-goose {
   width: 28px;
   opacity: 0.7;
-}
-
-/* CURSOR TRAIL */
-.cursor-goose {
-  position: fixed;
-  width: 24px;
-  height: 24px;
-  pointer-events: none;
-  opacity: 0.85;
-  z-index: 9999;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.cursor-goose-fade {
-  opacity: 0;
-  transform: translateY(-20px) rotate(20deg);
 }
