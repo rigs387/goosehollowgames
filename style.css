@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b5d3b;
+  color: #f2b300;
+  text-align: center;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 20px;
+  position: relative;
+}
+
+.hero-inner {
+  position: relative;
+  display: inline-block;
+}
+
+.logo {
+  max-width: 500px;
+  width: 80%;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.4));
+}
+
+/* GOOSE ACCENT */
+.goose {
+  position: absolute;
+  bottom: -20px;
+  right: -40px;
+  width: 120px;
+  opacity: 0.9;
+}
+
+/* TAGLINE */
+.tagline {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 22px;
+  background: #f2b300;
+  color: #0b5d3b;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: transform 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid #f2b300;
+  color: #f2b300;
+}
+
+/* GAMES */
+.games {
+  padding: 60px 20px;
+}
+
+.game-card {
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+/* DIVIDER GOOSE */
+.divider-goose {
+  width: 60px;
+  margin: 40px auto 10px;
+}
+
+/* ABOUT */
+.about {
+  padding: 60px 20px;
+}
+
+/* FOOTER */
+footer {
+  padding: 30px;
+  font-size: 14px;
+  opacity: 0.8;
+}
