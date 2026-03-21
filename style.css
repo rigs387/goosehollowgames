@@ -134,24 +134,6 @@ h2, h3 {
   line-height: 1.7;
 }
 
-/* GUTTER GOOSE */
-.gutter-goose {
-  position: fixed;
-  pointer-events: none;
-  z-index: 50;
-  opacity: 0.7;
-}
-
-@keyframes gutter-ltr {
-  from { left: -80px; }
-  to   { left: calc(100vw + 10px); }
-}
-
-@keyframes gutter-rtl {
-  from { left: calc(100vw + 10px); }
-  to   { left: -80px; }
-}
-
 /* FOOTER */
 footer {
   padding: 30px;

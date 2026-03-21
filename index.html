@@ -51,29 +51,6 @@
   <p>© Goose Hollow Games</p>
 </footer>
 
-<script>
-function spawnGutterGoose() {
-  if (window.innerWidth < 640) return;
-  var goose = document.createElement('img');
-  goose.src = 'assets/goose.png';
-  goose.className = 'gutter-goose';
-  var size = 40 + Math.floor(Math.random() * 30);
-  var top  = 10 + Math.random() * 75;
-  var dur  = 10 + Math.random() * 10;
-  var ltr  = Math.random() > 0.5;
-  goose.style.width     = size + 'px';
-  goose.style.top       = top + 'vh';
-  goose.style.animation = (ltr ? 'gutter-ltr' : 'gutter-rtl') + ' ' + dur + 's linear forwards';
-  if (!ltr) goose.style.transform = 'scaleX(-1)';
-  document.body.appendChild(goose);
-  goose.addEventListener('animationend', function () { goose.remove(); });
-}
-
-setTimeout(spawnGutterGoose, 2000);
-(function loop() {
-  setTimeout(function () { spawnGutterGoose(); loop(); }, 8000 + Math.random() * 7000);
-})();
-</script>
 
 </body>
 </html>
