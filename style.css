@@ -12,7 +12,7 @@ h2, h3 {
 
 /* HERO */
 .hero {
-  padding: 40px 20px 20px;
+  padding: 30px 20px 10px;
 }
 
 .logo {
@@ -51,18 +51,6 @@ h2, h3 {
   background: transparent;
   border: 2px solid #f2b300;
   color: #f2b300;
-}
-
-/* HERO GOOSE */
-@keyframes waddle {
-  0%, 100% { transform: rotate(-4deg); }
-  50%       { transform: rotate(4deg);  }
-}
-
-.hero-goose {
-  width: 120px;
-  margin-top: 16px;
-  animation: waddle 1.8s ease-in-out infinite;
 }
 
 /* GAMES */
