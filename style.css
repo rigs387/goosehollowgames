@@ -134,6 +134,17 @@ h2, h3 {
   line-height: 1.7;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.social-links .btn {
+  margin: 0;
+}
+
 /* FOOTER */
 footer {
   padding: 30px;
