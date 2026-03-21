@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Goose Hollow Games — an indie studio making sports and management simulation games. One Dev. One Goose. Big Ideas.">
   <title>Goose Hollow Games</title>
-  <link rel="icon" id="favicon" href="assets/goose.png">
+  <link rel="icon" href="assets/goose.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -27,7 +27,6 @@
         <a href="https://goosehollowgames.itch.io/track-star" class="btn" target="_blank" rel="noopener">Play on itch.io</a>
         <a href="https://vimeo.com/1175597018" class="btn outline" target="_blank" rel="noopener">Watch Trailer</a>
       </div>
-      <img src="assets/goose.png" class="card-goose" aria-hidden="true" alt="">
     </div>
   </div>
 </section>
@@ -44,66 +43,13 @@
     Goose Hollow Games is an indie studio focused on sports and management simulation games.
     Built with a love for systems, storytelling, and a little chaos.
   </p>
-  <div class="follow-wrap">
-    <img src="assets/goose.png" class="follow-goose" aria-hidden="true" alt="">
-    <a href="https://goosehollowgames.itch.io/" class="btn outline" target="_blank" rel="noopener">Follow on itch.io</a>
-  </div>
+  <a href="https://goosehollowgames.itch.io/" class="btn outline" target="_blank" rel="noopener">Follow on itch.io</a>
 </section>
 
 <footer>
-  <img src="assets/goose.png" class="footer-goose" alt="Honk" title="Honk">
+  <img src="assets/goose.png" class="footer-goose" alt="">
   <p>© Goose Hollow Games</p>
 </footer>
-
-<script>
-// 1. Animated favicon — goose waddling in the browser tab
-(function () {
-  var canvas = document.createElement('canvas');
-  canvas.width = 32; canvas.height = 32;
-  var ctx = canvas.getContext('2d');
-  var link = document.getElementById('favicon');
-  var img = new Image();
-  img.src = 'assets/goose.png';
-  var angle = 0, dir = 1;
-  img.onload = function () {
-    setInterval(function () {
-      ctx.clearRect(0, 0, 32, 32);
-      ctx.save();
-      ctx.translate(16, 16);
-      ctx.rotate(angle);
-      ctx.drawImage(img, -13, -13, 26, 26);
-      ctx.restore();
-      link.href = canvas.toDataURL();
-      angle += 0.07 * dir;
-      if (angle > 0.28 || angle < -0.28) dir *= -1;
-    }, 120);
-  };
-})();
-
-// 2. Footer goose honk on click
-document.querySelector('.footer-goose').addEventListener('click', function () {
-  try {
-    var ac = new (window.AudioContext || window.webkitAudioContext)();
-    var osc = ac.createOscillator();
-    var gain = ac.createGain();
-    var filter = ac.createBiquadFilter();
-    filter.type = 'bandpass';
-    filter.frequency.value = 700;
-    filter.Q.value = 3;
-    osc.connect(filter);
-    filter.connect(gain);
-    gain.connect(ac.destination);
-    osc.type = 'sawtooth';
-    osc.frequency.setValueAtTime(520, ac.currentTime);
-    osc.frequency.exponentialRampToValueAtTime(260, ac.currentTime + 0.25);
-    gain.gain.setValueAtTime(0, ac.currentTime);
-    gain.gain.linearRampToValueAtTime(0.35, ac.currentTime + 0.02);
-    gain.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + 0.35);
-    osc.start(ac.currentTime);
-    osc.stop(ac.currentTime + 0.35);
-  } catch (e) {}
-});
-</script>
 
 </body>
 </html>

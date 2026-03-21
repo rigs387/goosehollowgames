@@ -59,11 +59,11 @@ h2, h3 {
 }
 
 .game-card {
-  position: relative;
   margin: 20px auto;
   max-width: 500px;
   border: 2px solid rgba(242, 179, 0, 0.3);
   border-radius: 12px;
+  overflow: hidden;
   transition: transform 0.2s ease, border-color 0.2s ease;
   text-align: left;
 }
@@ -76,11 +76,9 @@ h2, h3 {
 .game-cover {
   width: 100%;
   display: block;
-  border-radius: 10px 10px 0 0;
 }
 
 .game-card-body {
-  position: relative;
   padding: 16px 20px 20px;
 }
 
@@ -101,29 +99,6 @@ h2, h3 {
 
 .game-links .btn {
   margin: 0;
-}
-
-/* CARD GOOSE — appears + bobs on card hover */
-@keyframes card-bob {
-  0%, 100% { transform: translateY(0) rotate(-5deg); }
-  50%       { transform: translateY(-6px) rotate(5deg); }
-}
-
-.card-goose {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  width: 44px;
-  opacity: 0;
-  transform: scale(0.6);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  pointer-events: none;
-}
-
-.game-card:hover .card-goose {
-  opacity: 1;
-  transform: scale(1);
-  animation: card-bob 0.7s ease-in-out infinite;
 }
 
 /* GOOSE PARADE */
@@ -159,31 +134,6 @@ h2, h3 {
   line-height: 1.7;
 }
 
-/* FOLLOW BUTTON + GOOSE */
-@keyframes excited {
-  0%, 100% { transform: rotate(-15deg) scale(1.1); }
-  50%       { transform: rotate(15deg)  scale(1.2); }
-}
-
-.follow-wrap {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.follow-goose {
-  width: 32px;
-  opacity: 0;
-  transform: scale(0.5);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.follow-wrap:hover .follow-goose {
-  opacity: 1;
-  transform: scale(1);
-  animation: excited 0.5s ease-in-out infinite;
-}
-
 /* FOOTER */
 footer {
   padding: 30px;
@@ -202,46 +152,4 @@ footer p {
 .footer-goose {
   width: 28px;
   opacity: 0.7;
-  cursor: pointer;
-  transition: transform 0.1s ease;
-}
-
-.footer-goose:active {
-  transform: scale(0.85);
-}
-
-/* 404 PAGE */
-.not-found {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-}
-
-.lost-goose {
-  width: 100px;
-  margin-bottom: 16px;
-  animation: confused 2.5s ease-in-out infinite;
-}
-
-@keyframes confused {
-  0%   { transform: rotate(-12deg); }
-  25%  { transform: rotate(12deg);  }
-  50%  { transform: rotate(-8deg);  }
-  75%  { transform: rotate(10deg);  }
-  100% { transform: rotate(-12deg); }
-}
-
-.not-found h1 {
-  font-family: 'Fredoka One', Arial, sans-serif;
-  font-size: 48px;
-  margin: 0 0 12px;
-}
-
-.not-found p {
-  margin: 0 0 24px;
-  font-size: 18px;
-  opacity: 0.85;
 }
