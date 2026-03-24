@@ -95,6 +95,7 @@ h2, h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  justify-content: center;
 }
 
 .game-links .btn {
