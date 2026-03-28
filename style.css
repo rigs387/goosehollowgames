@@ -375,7 +375,7 @@ a { color: inherit; }
   background: var(--gold-dim);
   border: 1px solid var(--gold-border);
   border-radius: 10px;
-  padding: 28px 26px;
+  padding: 18px 20px;
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
