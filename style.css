@@ -181,13 +181,7 @@ a { color: inherit; }
   margin-bottom: 40px;
   font-size: 13px;
   color: var(--muted);
-  text-decoration: none;
   letter-spacing: 0.03em;
-  transition: color 0.15s;
-}
-
-.hero-secondary-cta:hover {
-  color: var(--gold);
 }
 
 .steam-widget {
@@ -524,12 +518,22 @@ footer {
   font-size: 13px;
   color: var(--muted);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
 
 footer p { margin: 0; }
+
+.footer-bottom-line a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.footer-bottom-line a:hover {
+  text-decoration: underline;
+}
 
 .footer-goose {
   width: 24px;
@@ -569,5 +573,10 @@ footer p { margin: 0; }
     width: 100%;
     max-width: 320px;
     text-align: center;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 6px;
   }
 }
