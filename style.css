@@ -176,14 +176,6 @@ a { color: inherit; }
   margin-bottom: 16px;
 }
 
-.hero-secondary-cta {
-  display: block;
-  margin-bottom: 40px;
-  font-size: 13px;
-  color: var(--muted);
-  letter-spacing: 0.03em;
-}
-
 .steam-widget {
   display: flex;
   justify-content: center;
