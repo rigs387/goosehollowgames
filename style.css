@@ -106,8 +106,8 @@ img {
 }
 
 .brand-mark {
-  width: 46px;
-  height: 46px;
+  width: 54px;
+  height: 54px;
   border-radius: 9px;
 }
 
@@ -267,7 +267,7 @@ img {
 .screenshot-fallback {
   background-image:
     linear-gradient(rgba(10, 54, 32, 0.16), rgba(10, 54, 32, 0.16)),
-    url("assets/Track Star - 462 x 174 (1).png");
+    url("assets/Track Star - 462 x 174.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: min(72%, 420px) auto;
@@ -278,6 +278,19 @@ img {
   height: 100%;
   object-fit: cover;
   background: var(--slot-bg);
+}
+
+.hero-title-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 38px;
+}
+
+.hero-title-card img {
+  width: min(100%, 462px);
+  height: auto;
+  object-fit: contain;
 }
 
 .hero-shot .screenshot-frame {
