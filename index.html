@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Track Star — the text-based high school track & field career sim. Play the demo and wishlist on Steam.">
+  <meta name="description" content="Track Star is a text-based high-school track and field career sim by Goose Hollow Games. Play the free demo and wishlist on Steam.">
   <title>Track Star | Goose Hollow Games</title>
   <link rel="icon" href="assets/goose.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FHCZP6Y2F2"></script>
   <script>
@@ -19,214 +20,115 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- ═══════════════════════════
-     1. HERO
-═══════════════════════════ -->
-<header class="hero">
-  <a href="/" class="site-logo">
-    <img src="assets/logo.jpg" alt="Goose Hollow Games">
-  </a>
-  <p class="hero-eyebrow">One Dev. One Goose. Big Ideas.</p>
-
-  <div class="hero-content">
-    <h1 class="hero-title">
-      Build a track star. Chase your rival.<br>Rewrite your career.
-    </h1>
-    <p class="hero-sub">A text-based sports career sim where every race shapes your story.</p>
-
-    <div class="hero-ctas">
-      <a href="https://store.steampowered.com/app/4538830/Track_Star/?utm_source=website&utm_medium=referral&utm_campaign=homepage"
-         class="btn btn-primary btn-lg" target="_blank" rel="noopener">
-        Play the Demo on Steam
+  <div class="site-shell">
+    <nav class="site-nav" aria-label="Primary">
+      <a class="brand-lockup" href="/" aria-label="Goose Hollow Games home">
+        <span class="brand-mark">
+          <img src="assets/logo.jpg" alt="" width="46" height="46">
+        </span>
+        <span class="brand-tagline">One Dev &middot; One Goose &middot; Big Ideas</span>
       </a>
-      <a href="https://discord.gg/8BFuwmStGK"
-         class="btn btn-outline btn-lg" target="_blank" rel="noopener">
-        Join the Discord
+
+      <a class="nav-pill" href="https://store.steampowered.com/app/4538830/Track_Star/" target="_blank" rel="noopener">
+        Wishlist &rarr;
       </a>
-    </div>
-    <div class="steam-widget">
-      <iframe src="https://store.steampowered.com/widget/4538830/"
-              frameborder="0" width="646" height="190"
-              title="Track Star on Steam"></iframe>
-    </div>
+    </nav>
 
+    <main>
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">Build a track star.<br><span>Chase your rival.</span></h1>
+          <p>A text-based high-school track &amp; field career sim where every race shapes your story &mdash; and your shot at beating the one athlete you can't escape.</p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="https://store.steampowered.com/app/4538830/Track_Star/?utm_source=website&utm_medium=referral&utm_campaign=homepage" target="_blank" rel="noopener">
+              &#9654; Play the Free Demo
+            </a>
+            <a class="btn btn-secondary" href="https://discord.gg/8BFuwmStGK" target="_blank" rel="noopener">
+              Join the Discord
+            </a>
+          </div>
+        </div>
+
+        <figure class="hero-shot">
+          <figcaption>FIG.01 &mdash; RACE SCREEN</figcaption>
+          <div class="screenshot-frame screenshot-fallback">
+            <img src="assets/track-star-race-screen.png" alt="Track Star race screen" onerror="this.hidden=true">
+          </div>
+        </figure>
+      </section>
+
+      <section class="steam-strip" aria-label="Trailer">
+        <div class="band-inner strip-inner">
+          <p>&#9654; Watch a full season &mdash; training to championship</p>
+          <a href="https://www.youtube.com/embed/FKBBsiXxKlQ" target="_blank" rel="noopener">Play trailer &rarr;</a>
+        </div>
+      </section>
+
+      <section class="gallery-section" aria-labelledby="gallery-title">
+        <div class="section-header">
+          <h2 id="gallery-title">See it in motion</h2>
+        </div>
+
+        <div class="screenshot-grid" aria-label="Track Star screenshots">
+          <figure class="gallery-shot gallery-shot-large">
+            <span class="shot-label">Training Week</span>
+            <div class="screenshot-frame screenshot-fallback">
+              <img src="assets/track-star-training-week.png" alt="Track Star training week screen" loading="lazy" onerror="this.hidden=true">
+            </div>
+          </figure>
+
+          <figure class="gallery-shot">
+            <span class="shot-label">Rival Profile</span>
+            <div class="screenshot-frame screenshot-fallback">
+              <img src="assets/track-star-rival-profile.png" alt="Track Star rival profile screen" loading="lazy" onerror="this.hidden=true">
+            </div>
+          </figure>
+
+          <figure class="gallery-shot">
+            <span class="shot-label">Results</span>
+            <div class="screenshot-frame screenshot-fallback">
+              <img src="assets/track-star-results.png" alt="Track Star race results screen" loading="lazy" onerror="this.hidden=true">
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="final-cta" aria-labelledby="cta-title">
+        <div class="band-inner final-cta-inner">
+          <h2 id="cta-title">Your rival is already<br>training.</h2>
+          <p>Get on the starting line. Play the free demo &mdash; full game July 15.</p>
+          <div class="button-row button-row-center">
+            <a class="btn btn-primary" href="https://store.steampowered.com/app/4538830/Track_Star/?utm_source=website&utm_medium=referral&utm_campaign=homepage" target="_blank" rel="noopener">
+              &#9654; Play the Free Demo
+            </a>
+            <a class="btn btn-secondary btn-wide" href="https://store.steampowered.com/app/4538830/Track_Star/" target="_blank" rel="noopener">
+              Wishlist on Steam
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="band-inner footer-inner">
+        <a class="footer-brand" href="/" aria-label="Goose Hollow Games home">
+          <span class="footer-mark">
+            <img src="assets/logo.jpg" alt="" width="40" height="40">
+          </span>
+          <span>
+            <strong>Goose Hollow Games</strong>
+            <small>Sports &amp; management sims</small>
+          </span>
+        </a>
+
+        <div class="footer-links" aria-label="Social links">
+          <a href="https://discord.gg/8BFuwmStGK" target="_blank" rel="noopener">Discord</a>
+          <a href="https://x.com/GooseHollowGame" target="_blank" rel="noopener">X</a>
+          <a href="https://www.youtube.com/channel/UCqANlt5lPcEhzUA6RyVoFSg" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://goosehollowgames.itch.io/track-star" target="_blank" rel="noopener">itch.io</a>
+        </div>
+      </div>
+    </footer>
   </div>
-</header>
-
-<!-- ═══════════════════════════
-     GOOSE DIVIDER
-═══════════════════════════ -->
-<div class="goose-parade" aria-hidden="true">
-  <img src="assets/goose.png" alt="">
-  <img src="assets/goose.png" alt="">
-  <img src="assets/goose.png" alt="">
-</div>
-
-<!-- ═══════════════════════════
-     2. TRAILER
-═══════════════════════════ -->
-<section class="trailer section-dark">
-  <p class="trailer-framing">Watch a full season play out — from training to rivalry to championship.</p>
-  <div class="video-wrapper">
-    <iframe
-      src="https://www.youtube.com/embed/FKBBsiXxKlQ"
-      title="Track Star Trailer"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-<!-- ═══════════════════════════
-     3. GAMEPLAY LOOP
-═══════════════════════════ -->
-<section class="gameplay-loop">
-  <h2 class="section-title">How It Plays</h2>
-  <p class="loop-steps">Train &rarr; Choose Events &rarr; Compete &rarr; Improve &rarr; Face Rivals &rarr; Repeat</p>
-  <p class="loop-sub">Every decision shapes your athlete's progression — and your chances of finally beating your biggest rival and winning championships.</p>
-</section>
-
-<!-- ═══════════════════════════
-     4. SOCIAL PROOF
-═══════════════════════════ -->
-<section class="social-proof">
-  <div class="stats">
-    <div class="stat">
-      <span class="stat-number">July 15</span>
-      <span class="stat-label">Full game releases on Steam</span>
-    </div>
-    <div class="stat-divider"></div>
-    <div class="stat">
-      <span class="stat-number">Free</span>
-      <span class="stat-label">Demo available on Steam now</span>
-    </div>
-  </div>
-  <div class="hero-ctas">
-    <a href="https://store.steampowered.com/app/4538830/Track_Star/?utm_source=website&utm_medium=referral&utm_campaign=homepage"
-       class="btn btn-primary" target="_blank" rel="noopener">
-      Play the Demo
-    </a>
-    <a href="https://store.steampowered.com/app/4538830/Track_Star/?utm_source=website&utm_medium=referral&utm_campaign=homepage"
-       class="btn btn-outline" target="_blank" rel="noopener">
-      Wishlist on Steam
-    </a>
-  </div>
-</section>
-
-<!-- ═══════════════════════════
-     4. FEATURES
-═══════════════════════════ -->
-<section class="features section-dark">
-  <h2 class="section-title">Build. Train. Compete. Legacy.</h2>
-  <p class="features-sub">Every decision moves you closer to beating the one athlete you can't escape.</p>
-  <div class="features-grid">
-
-    <div class="feature-card">
-<h3>Four Years. One Shot.</h3>
-      <p>Guide your athlete through every season of high school competition — from freshman nerves to senior glory.</p>
-    </div>
-
-    <div class="feature-card">
-<h3>Every Week Counts.</h3>
-      <p>Pick your events, manage your energy, and time your peak. One bad week can cost you a championship.</p>
-    </div>
-
-    <div class="feature-card">
-<h3>Rivals That Remember.</h3>
-      <p>Your competition evolves. Persistent rivals grow with you — beat them once and they'll be ready next time.</p>
-    </div>
-
-    <div class="feature-card">
-<h3>Performance Drives Progress.</h3>
-      <p>No grinding. No luck. Every result is earned through smart decisions and execution when it matters most.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ═══════════════════════════
-     GOOSE DIVIDER
-═══════════════════════════ -->
-<div class="goose-parade" aria-hidden="true">
-  <img src="assets/goose.png" alt="">
-  <img src="assets/goose.png" alt="">
-  <img src="assets/goose.png" alt="">
-</div>
-
-<!-- ═══════════════════════════
-     5. UPDATES
-═══════════════════════════ -->
-<section class="devlogs">
-  <h2 class="section-title">Updates &amp; Dev Posts</h2>
-  <div class="devlog-list">
-
-    <article class="devlog-item">
-      <h3><a href="https://store.steampowered.com/news/app/4538830" target="_blank" rel="noopener">Read the latest updates on Steam &rarr;</a></h3>
-      <p>Dev posts, system breakdowns, and release news — all posted to the Track Star Steam news hub.</p>
-    </article>
-
-  </div>
-</section>
-
-<!-- ═══════════════════════════
-     6. FINAL CTA
-═══════════════════════════ -->
-<section class="final-cta section-dark">
-  <h2 class="cta-headline">Play the demo.<br>Wishlist Track Star on Steam.</h2>
-  <p class="cta-sub">Your rival is already training. Get on the starting line.</p>
-  <div class="hero-ctas">
-    <a href="https://store.steampowered.com/app/4538830/Track_Star/?utm_source=website&utm_medium=referral&utm_campaign=homepage"
-       class="btn btn-primary btn-xl" target="_blank" rel="noopener">
-      Play the Demo &rarr;
-    </a>
-    <a href="https://store.steampowered.com/app/4538830/Track_Star/?utm_source=website&utm_medium=referral&utm_campaign=homepage"
-       class="btn btn-outline btn-xl" target="_blank" rel="noopener">
-      Wishlist on Steam
-    </a>
-  </div>
-</section>
-
-<!-- ═══════════════════════════
-     7. ABOUT
-═══════════════════════════ -->
-<section class="other-game">
-  <h2 class="section-title">Also on itch.io</h2>
-  <p class="other-game-copy">
-    Looking for something different? <strong>Main Eventer</strong> is a free-to-play browser wrestling career sim available now on itch.io.
-  </p>
-  <div class="itch-widget">
-    <iframe frameborder="0" src="https://itch.io/embed/4451374" width="552" height="167" title="Main Eventer on itch.io">
-      <a href="https://goosehollowgames.itch.io/main-eventer">Main Eventer by Goose Hollow Games</a>
-    </iframe>
-  </div>
-</section>
-
-<section class="about">
-  <h2 class="section-title">About Goose Hollow Games</h2>
-  <p>
-    Goose Hollow Games is an indie studio focused on sports and management simulation games.
-    Built with a love for systems, storytelling, and a little chaos.
-  </p>
-  <div class="social-links">
-    <a href="https://store.steampowered.com/app/4538830/Track_Star/?utm_source=website&utm_medium=referral&utm_campaign=homepage"
-       class="btn btn-primary" target="_blank" rel="noopener">Play the Demo</a>
-    <a href="https://store.steampowered.com/app/4538830/Track_Star/?utm_source=website&utm_medium=referral&utm_campaign=homepage"
-       class="btn btn-outline" target="_blank" rel="noopener">Wishlist on Steam</a>
-    <a href="https://discord.gg/8BFuwmStGK" class="btn btn-outline" target="_blank" rel="noopener">Join the Discord</a>
-    <a href="https://x.com/GooseHollowGame" class="btn btn-outline" target="_blank" rel="noopener">Follow on X</a>
-    <a href="https://www.youtube.com/channel/UCqANlt5lPcEhzUA6RyVoFSg" class="btn btn-outline" target="_blank" rel="noopener">Subscribe on YouTube</a>
-  </div>
-</section>
-
-<footer>
-  <img src="assets/goose.png" class="footer-goose" alt="">
-  <p>&copy; Goose Hollow Games</p>
-  <p class="footer-bottom-line">
-    Earlier builds and devlogs live on <a href="https://goosehollowgames.itch.io/track-star" target="_blank" rel="noopener">itch.io</a>
-  </p>
-</footer>
-
 </body>
 </html>
