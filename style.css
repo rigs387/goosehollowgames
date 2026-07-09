@@ -135,8 +135,7 @@ img {
 .brand-tagline,
 .nav-pill,
 .footer-links a,
-.shot-label,
-.hero-shot figcaption {
+.shot-label {
   font-family: "JetBrains Mono", Consolas, monospace;
   text-transform: uppercase;
 }
@@ -252,16 +251,6 @@ img {
 .hero-shot {
   position: relative;
   margin: 0;
-}
-
-.hero-shot figcaption {
-  position: absolute;
-  top: -14px;
-  left: -14px;
-  z-index: 2;
-  color: var(--text-faint);
-  font-size: 10px;
-  letter-spacing: 0.1em;
 }
 
 .screenshot-frame {
@@ -537,10 +526,6 @@ img {
 
   .hero-copy h1 {
     font-size: 44px;
-  }
-
-  .hero-shot figcaption {
-    left: 0;
   }
 
   .strip-inner,
