@@ -106,7 +106,7 @@ img {
 }
 
 .brand-mark {
-  width: 54px;
+  width: 162px;
   height: 54px;
   border-radius: 9px;
 }
@@ -284,17 +284,17 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 38px;
+  padding: 0;
 }
 
 .hero-title-card img {
-  width: min(100%, 462px);
-  height: auto;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-shot .screenshot-frame {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   border: 1px solid var(--border-strong);
   border-radius: 14px;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
@@ -325,11 +325,48 @@ img {
   font-size: 15px;
 }
 
-.strip-inner a {
+.strip-actions {
+  display: flex;
   flex: 0 0 auto;
-  color: var(--gold);
-  font-size: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.strip-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  border-radius: 9px;
+  padding: 10px 16px;
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 12px;
   font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.strip-button-gameplay {
+  background: var(--gold);
+  color: var(--text-on-gold);
+}
+
+.strip-button-gameplay:hover {
+  background: var(--gold-bright);
+  color: var(--text-on-gold);
+}
+
+.strip-button-trailer {
+  background: rgba(18, 74, 44, 0.6);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+
+.strip-button-trailer:hover {
+  border-color: var(--gold-bright);
+  color: var(--gold-bright);
 }
 
 .gallery-section {
@@ -502,6 +539,10 @@ img {
   .footer-inner {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .strip-actions {
+    justify-content: flex-start;
   }
 
   .screenshot-grid {
